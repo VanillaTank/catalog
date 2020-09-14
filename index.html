@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Каталог домашней библиотеки</title>
+</head>
+
+<body>
+    <div class="btn-container">
+        <button class="allBtn btn-menage" id="btnShowToSearchBook" type="button" data-tab="#containerSearchBook">Найти книгу</button>
+        <button class="allBtn btn-menage" id="btnAddNewBook" type="button" data-tab="#containerAddBook">Добавить книгу</button>
+        <button class="allBtn btn-menage" id="btnDelBook" type="button" data-tab="#containerDeliteBook">Удалить книгу</button>
+    </div>
+
+    <div class="container" id="containerAddBook">
+        <h2>Добавь книгу и сироп - сделай день ярче!</h2>
+        <input class="input" id="titleOfBook" type="text" placeholder="Название книги">
+        <input class="input" id="yearOfBook" type="text" placeholder="Год издания">
+        <input class="input" id="userAnnotattion" type="text" placeholder="Аннотация">
+        <input class="input" id="userAuthor" type="text" placeholder="Автор">
+        <input class="input" id="userPlace" type="text" placeholder="Место на полке">
+        <button class="allBtn" id="btnAddBook">Добавить книгу!</button>
+    </div>
+
+    <div class="container" id="containerSearchBook">
+        <h2>Есть чё почитать? А если найду?!</h2>
+        <input class="input" id="nameOfBook" type="text" placeholder="Введите название книги">
+        <button class="allBtn" id="search">Искать!</button>
+        <div class="result" id="result">
+            <p>Название: <span id="bookName"></span></p>
+            <p>Год издания: <span id="bookYear"></span></p>
+            <p>Аннотация: <span id="bookAnnotation"></span></p>
+            <p>Автор: <span id="bookAuthor"></span></p>
+            <p>Место: <span id="bookPlace"></span></p>
+        </div>
+        <div class="error" id="error">Усп, такой книги нет</div>
+    </div>
+    <div class="container" id="containerDeliteBook">
+        <input class="input" id="inputBookToDelete" type="text" placeholder="Введите название книги">
+        <button class="allBtn" id="delete">Удалить!</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
